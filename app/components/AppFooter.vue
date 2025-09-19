@@ -1,120 +1,95 @@
 <script setup lang="ts">
 const columns = [{
-  label: 'Resources',
+  label: 'Services',
   children: [{
-    label: 'Help center'
+    label: 'Air Freight',
+    to: '/services/air-freight'
   }, {
-    label: 'Docs'
+    label: 'Sea Freight',
+    to: '/services/sea-freight'
   }, {
-    label: 'Roadmap'
+    label: 'Special Transports',
+    to: '/services/special-transports'
   }, {
-    label: 'Changelog'
+    label: 'Customs Brokerage',
+    to: '/services/customs-brokerage'
+  }, {
+    label: 'Storage Solutions',
+    to: '/services/storage'
   }]
 }, {
-  label: 'Features',
+  label: 'Offices',
   children: [{
-    label: 'Affiliates'
+    label: 'Sydney',
+    to: '/offices/sydney'
   }, {
-    label: 'Portal'
+    label: 'Melbourne',
+    to: '/offices/melbourne'
   }, {
-    label: 'Jobs'
+    label: 'Brisbane',
+    to: '/offices/brisbane'
   }, {
-    label: 'Sponsors'
+    label: 'Perth',
+    to: '/offices/perth'
   }]
 }, {
   label: 'Company',
   children: [{
-    label: 'About'
+    label: 'About Us',
+    to: '/about'
   }, {
-    label: 'Pricing'
+    label: 'Contact',
+    to: '/contact'
   }, {
-    label: 'Careers'
+    label: 'Careers',
+    to: '/careers'
   }, {
-    label: 'Blog'
+    label: 'News',
+    to: '/service-center/news'
   }]
 }]
 
-const toast = useToast()
-
-const email = ref('')
-const loading = ref(false)
-
-function onSubmit() {
-  loading.value = true
-
-  toast.add({
-    title: 'Subscribed!',
-    description: 'You\'ve been subscribed to our newsletter.'
-  })
-}
 </script>
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
+    icon="lucide:truck"
     class="h-px"
   />
 
   <UFooter :ui="{ top: 'border-b border-default' }">
     <template #top>
       <UContainer>
-        <UFooterColumns :columns="columns">
-          <template #right>
-            <form @submit.prevent="onSubmit">
-              <UFormField
-                name="email"
-                label="Subscribe to our newsletter"
-                size="lg"
-              >
-                <UInput
-                  v-model="email"
-                  type="email"
-                  class="w-full"
-                  placeholder="Enter your email"
-                >
-                  <template #trailing>
-                    <UButton
-                      type="submit"
-                      size="xs"
-                      label="Subscribe"
-                    />
-                  </template>
-                </UInput>
-              </UFormField>
-            </form>
-          </template>
-        </UFooterColumns>
+        <UFooterColumns :columns="columns" />
       </UContainer>
     </template>
 
     <template #left>
       <p class="text-sm text-muted">
-        Built with Nuxt UI • © {{ new Date().getFullYear() }}
+        AGL LOGISTICS • Professional Freight & Logistics Services • © {{ new Date().getFullYear() }}
       </p>
     </template>
 
     <template #right>
       <UButton
-        to="https://go.nuxt.com/discord"
-        target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Nuxt on Discord"
+        to="tel:+61-2-9999-0000"
+        icon="lucide:phone"
+        aria-label="Call AGL Logistics"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://go.nuxt.com/x"
-        target="_blank"
-        icon="i-simple-icons-x"
-        aria-label="Nuxt on X"
+        to="mailto:info@agllogistics.com.au"
+        icon="lucide:mail"
+        aria-label="Email AGL Logistics"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://github.com/nuxt-ui-templates/landing"
+        to="https://linkedin.com/company/agl-logistics"
         target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="Nuxt UI on GitHub"
+        icon="i-simple-icons-linkedin"
+        aria-label="AGL Logistics on LinkedIn"
         color="neutral"
         variant="ghost"
       />

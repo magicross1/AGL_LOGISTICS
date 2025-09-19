@@ -1,161 +1,235 @@
 seo:
-  title: Nuxt Landing Template
-  description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
-title: AI-Powered Developer Productivity Platform
-description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
+  title: AGL LOGISTICS - Professional Freight & Logistics Services Australia
+  description: Leading Australian freight forwarder providing air freight, sea freight, customs brokerage, and storage solutions across Sydney, Melbourne, Brisbane & Perth.
+title: Professional [Freight & Logistics]{.text-white} Solutions
+description: Your trusted Australian logistics partner delivering comprehensive freight forwarding, customs brokerage, and storage solutions nationwide.
 hero:
   links:
-    - label: Get started
+    - label: Get Quote
       icon: i-lucide-arrow-right
       trailing: true
       color: primary
-      to: https://ui4.nuxt.com/docs/getting-started/installation/nuxt
-      target: _blank
+      to: "/contact"
       size: xl
-    - label: Clone on GitHub
-      icon: i-simple-icons-github
+      class: "bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 shadow-lg"
+    - label: Our Services
+      icon: i-lucide-truck
       size: xl
-      color: neutral
+      color: white
       variant: outline
-      to: https://github.com/nuxt-ui-templates/landing
-      target: _blank
+      to: "/services/air-freight"
+      class: "border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 shadow-lg"
 section:
-  title: '[Revolutionize]{.text-primary} your coding experience'
-  description: Transform your development workflow with AI-powered insights and personalized productivity optimization.
+  title: '[Streamline]{.text-primary} your global logistics'
+  description: Experience seamless freight forwarding with our comprehensive logistics solutions across Australia and worldwide destinations.
   images:
-    mobile: '/images/macbook-mobile.svg'
-    desktop: '/images/macbook.svg'
+    mobile: '/images/home.png'
+    desktop: '/images/home.png'
   features:
-    - title: Optimize your focus time
-      description: Let AI identify your peak coding hours and adapt to your natural rhythm. Focus on what matters most - writing great code, while our system optimizes your productivity patterns.
+    - title: Nationwide Coverage
+      description: With offices in Sydney, Melbourne, Brisbane, and Perth, we provide comprehensive logistics coverage across all major Australian cities and ports.
       class: border-l border-primary pl-4
-    - title: Track your best coding hours
-      description: Track when you code best with smart analytics. Get actionable insights to tackle challenging tasks during your peak performance hours.
+    - title: Expert Customs Clearance
+      description: Our experienced customs brokerage team ensures smooth and compliant clearance of your goods through Australian customs procedures.
       class: border-l border-default pt-4 pl-4
-    - title: Improve workflow efficiency
-      description: Automate your workflow optimization from code snippets to focus management. Ship better code faster with a streamlined development process.
+    - title: End-to-End Solutions
+      description: From air and sea freight to special transports and secure storage, we handle every aspect of your logistics chain with precision and care.
       class: border-l border-default pt-4 pl-4
 features:
-  title: Take control of your [productivity]{.text-primary}
-  description: Make every coding session count with smart analytics and workflow optimization.
+  title: Comprehensive [logistics]{.text-primary} services
+  description: From air to sea, we deliver complete freight forwarding solutions tailored to your business needs.
   features:
-    - title: AI-Powered Focus Tracking
-      description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
-      icon: i-lucide-wand-sparkles
+    - title: Air Freight
+      description: Fast and reliable air cargo services connecting Australia to global destinations with priority handling and tracking.
+      icon: i-lucide-plane
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Distraction Alerts
-      description: Get notified when your focus drifts and bring your attention back.
-      icon: i-lucide-bell-ring
+    - title: Sea Freight
+      description: Cost-effective ocean freight solutions for both FCL and LCL shipments with comprehensive port-to-port services.
+      icon: i-lucide-ship
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Smart Code Snippets
-      description: Save and reuse frequently used code blocks for efficiency.
-      icon: i-lucide-code-xml
+    - title: Special Transports
+      description: Specialized handling for oversized, hazardous, or high-value cargo with expert project management.
+      icon: i-lucide-truck
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Deep Work Mode
-      description: Block distractions and set structured coding sessions with built-in Pomodoro timers.
-      icon: i-lucide-moon
+    - title: Customs Brokerage
+      description: Expert customs clearance services ensuring compliant and efficient processing of your imports and exports.
+      icon: i-lucide-clipboard-check
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Collaborative Insights
-      description: Sync your workflow with teammates and see when they are most productive.
-      icon: i-lucide-mouse-pointer-2
+    - title: Secure Storage
+      description: Modern warehouse facilities with climate control and security systems for safe cargo storage and distribution.
+      icon: i-lucide-warehouse
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Performance Analytics
-      description: Track your coding metrics and get insights to boost your speed and code quality.
-      icon: i-lucide-chart-line
+    - title: Real-time Tracking
+      description: Advanced shipment tracking and reporting systems providing complete visibility throughout your supply chain.
+      icon: i-lucide-map-pin
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
 steps:
-  title: Start coding smarter in [3 steps]{.text-primary}
-  description: Transform your development workflow with our AI-powered assistant.
+  title: Ship with confidence in [3 steps]{.text-primary}
+  description: Experience seamless logistics with our streamlined freight forwarding process.
   items:
-    - title: Connect Your IDE
-      description: Seamlessly integrate with VS Code, JetBrains, or your preferred editor. Get started in under 2 minutes with zero configuration needed.
+    - title: Request Quote
+      description: Contact our logistics experts for a customized quote. We analyze your shipping requirements and provide competitive rates within 24 hours.
       image:
         light: '/images/light/connect.svg'
         dark: '/images/dark/connect.svg'
-    - title: Track & Analyze
-      description: Our AI silently monitors your coding patterns to identify your peak productivity hours and potential workflow bottlenecks.
+    - title: Book & Track
+      description: Once confirmed, we handle all documentation, customs clearance, and provide real-time tracking throughout your shipment journey.
       image:
         light: '/images/light/optimize.svg'
         dark: '/images/dark/optimize.svg'
-    - title: Optimize & Code Smarter
-      description: Receive personalized recommendations to enhance your coding efficiency. Watch your productivity soar with data-driven insights.
+    - title: Deliver & Support
+      description: Your cargo reaches its destination safely and on time. Our customer support team ensures smooth delivery and addresses any concerns.
       image:
         light: '/images/light/track.svg'
         dark: '/images/dark/track.svg'
-pricing:
-  title: Choose your [productivity]{.text-primary} path
-  description: Unlock AI-powered coding efficiency with our flexible plans. Whether you're a solo developer or part of a team, we have the perfect toolset to maximize your development workflow.
-  plans:
-    - title: Pro Developer
-      description: Perfect for individual developers focused on maximizing productivity.
-      price: $199
-      features:
-        - AI productivity tracking to optimize your peak coding hours
-        - Smart distraction alerts to maintain deep focus
-        - Personal code snippet library for faster development
-        - Deep Work Mode with Pomodoro timer integration
-        - Performance analytics dashboard
-        - Priority email support
-      button:
-        label: Buy now
-        color: neutral
-        variant: outline
-        to: '#'
-    - title: Team Developer
-      description: For bootstrappers and indie hackers.
-      price: $199
-      features:
-        - Everything in Pro Developer
-        - Team productivity analytics and insights
-        - Collaborative code snippet sharing
-        - Cross-team performance tracking
-        - Synchronized deep work sessions
-        - Priority team support with dedicated manager
-      button:
-        label: Buy now
-        variant: subtle
-        to: '#'
+offices:
+  title: Our [Australian]{.text-primary} Network
+  description: Strategically located across Australia's major cities to serve your logistics needs with local expertise and global reach.
+  locations:
+    - city: Sydney
+      status: active
+      isHeadquarters: true
+      address: 6 Ladbroke Street, Milperra NSW 2214
+      phone: +61 2 8747 3069
+      email: ops@agllogistics.com.au
+      description: Our headquarters serving NSW and eastern Australia with full-service logistics capabilities.
+      services:
+        - Full freight forwarding services
+        - Customs brokerage and clearance
+        - Air and sea freight operations
+        - Specialized transport coordination
+        - Secure warehouse facilities
+        - 24/7 customer support
+    - city: Melbourne
+      status: active
+      isHeadquarters: false
+      address: 12 Hawthorn Avenue, Sunshine North VIC 3020
+      phone: +61 3 9043 3143
+      email: melops@agllogistics.com.au
+      description: Serving Victoria and southern Australia with comprehensive logistics solutions.
+      services:
+        - Complete freight management
+        - Expert customs brokerage
+        - Multi-modal transport services
+        - Project cargo handling
+        - Distribution and storage
+        - Local logistics expertise
+    - city: Brisbane
+      status: active
+      isHeadquarters: false
+      address: U2/26 Navigator Pl, Hendra QLD 4011
+      phone: +61 7 3555 1838
+      email: bneops@agllogistics.com.au
+      description: Queensland operations hub providing northern Australia coverage.
+      services:
+        - Air and sea freight services
+        - Customs documentation
+        - Regional distribution network
+        - Mining and resources logistics
+        - Temperature-controlled storage
+        - Express delivery options
+    - city: Perth
+      status: coming_soon
+      isHeadquarters: false
+      address: Coming Soon
+      phone: +61 2 8747 3069
+      email: ops@agllogistics.com.au
+      description: Western Australia operations expanding soon to serve mining and resources sector.
+      services:
+        - Mining and resources expertise
+        - Bulk cargo handling
+        - International freight services
+        - Customs and quarantine
+        - Heavy machinery transport
+        - Remote area delivery
 testimonials:
-  title: Join thousands of productive [developers]{.text-primary}
-  description: See how developers are transforming their coding workflow and achieving more with our AI-powered platform.
+  title: Trusted by [businesses]{.text-primary} across Australia
+  description: See how companies are streamlining their supply chains and achieving logistics excellence with AGL Logistics.
   items:
-    - quote: Since using this tool, my productivity has doubled. The AI insights helped me find my perfect coding rhythm and now I ship features twice as fast.
+    - quote: AGL Logistics has transformed our supply chain efficiency. Their expertise in customs clearance and reliable air freight services helped us reduce delivery times by 40%.
       user:
-        name: 'Sarah Moriceau'
-        description: 'Brand Designer'
-        target: _blank
+        name: 'Michael Chen'
+        description: 'Supply Chain Manager, Tech Solutions Pty Ltd'
         avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Outstanding service for our mining equipment shipments. Their Perth office handled our oversized cargo with precision and delivered everything on schedule.
       user:
-        name: 'Sébastien Chopin'
-        description:  'Lead Software Engineer'
-        target: _blank
+        name: 'Sarah Williams'
+        description: 'Logistics Director, Mining Corp Australia'
         avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
+          src: 'https://images.unsplash.com/photo-1494790108755-2616b612b932?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Professional, reliable, and cost-effective. AGL's sea freight services and customs brokerage have been instrumental in expanding our international operations.
       user:
-        name: 'Benjamin Canac'
-        description:  'Senior Frontend Developer'
-        target: _blank
+        name: 'David Thompson'
+        description: 'Operations Manager, Export Industries Ltd'
         avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
+          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Exceptional customer service and competitive pricing. AGL's air freight solutions have been crucial for our time-sensitive pharmaceutical shipments.
+      user:
+        name: 'Dr. Emma Rodriguez'
+        description: 'Logistics Manager, MedSupply Australia'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Their customs brokerage team saved us thousands in duties through proper classification. Highly recommend their expertise for complex imports.
+      user:
+        name: 'James Patterson'
+        description: 'Import Manager, Industrial Equipment Ltd'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Fast, reliable, and always available when we need them. AGL's emergency support has saved our critical shipments multiple times.
+      user:
+        name: 'Lisa Zhang'
+        description: 'Operations Director, TechFlow Solutions'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Their Brisbane facility perfectly handles our mining equipment. Professional staff and excellent warehouse security give us peace of mind.
+      user:
+        name: 'Robert Mitchell'
+        description: 'Procurement Manager, Queensland Mining Co'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Seamless integration with our supply chain. AGL's tracking system and regular updates keep us informed every step of the way.
+      user:
+        name: 'Amanda Foster'
+        description: 'Supply Chain Coordinator, Retail Dynamics'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Cost-effective sea freight solutions that helped us expand into Asian markets. Their Melbourne team provides excellent support.
+      user:
+        name: 'Tony Nguyen'
+        description: 'Export Manager, Australian Food Exports'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+        rating: 5
+    - quote: Professional handling of our temperature-sensitive cargo. Their climate-controlled facilities and expertise are unmatched.
+      user:
+        name: 'Rachel Cooper'
+        description: 'Logistics Specialist, Fresh Produce Group'
+        avatar:
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+        rating: 5
 cta:
-  title: Ready to build an amazing landing page?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  title: Ready to streamline your logistics?
+  description: Join hundreds of Australian businesses trusting AGL Logistics for their freight forwarding needs. Get your quote today and experience professional logistics solutions.
   links:
-    - label: Start building
-      to: 'https://ui4.nuxt.com/docs/getting-started/installation/nuxt'
-      target: _blank
+    - label: Get Quote Now
+      to: '/contact'
       trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/landing'
-      target: _blank
+    - label: Call Us Today
+      to: 'tel:+61-2-9999-0000'
       variant: subtle
-      icon: i-simple-icons-github
+      icon: i-lucide-phone
