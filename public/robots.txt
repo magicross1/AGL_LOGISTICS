@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://agllogistics.com.au/sitemap.xml
+
+# Allow all search engines to access all content
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
+
+# Additional sitemap files (if needed in the future)
+# Sitemap: https://agllogistics.com.au/sitemap-news.xml
+# Sitemap: https://agllogistics.com.au/sitemap-images.xml

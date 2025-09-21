@@ -27,10 +27,27 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
+  // Enhanced Prerendering
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/about',
+        '/contact',
+        '/careers',
+        '/services/air-freight',
+        '/services/sea-freight',
+        '/services/special-transports',
+        '/services/customs-brokerage',
+        '/services/storage',
+        '/service-center',
+        '/service-center/news',
+        '/service-center/notices',
+        '/service-center/downloads',
+        '/offices/sydney',
+        '/offices/melbourne',
+        '/offices/brisbane',
+        '/offices/perth'
       ]
     }
   },

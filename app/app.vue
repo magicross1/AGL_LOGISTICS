@@ -17,9 +17,13 @@ useHead({
 })
 
 useSeoMeta({
-  ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/landing-light.png',
-  twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/landing-light.png',
-  twitterCard: 'summary_large_image'
+  ogImage: 'https://agllogistics.com.au/og-image.svg',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  twitterImage: 'https://agllogistics.com.au/og-image.svg',
+  twitterCard: 'summary_large_image',
+  ogType: 'website',
+  ogLocale: 'en_AU'
 })
 </script>
 

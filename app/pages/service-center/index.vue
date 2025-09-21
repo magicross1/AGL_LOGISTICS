@@ -245,70 +245,15 @@ useSeoMeta({
       </div>
     </UPageSection>
 
-    <!-- Newsletter Signup -->
+    <!-- Email Templates for Service Center -->
     <UPageSection
       id="subscribe"
       title="Stay Updated"
-      description="Subscribe to our newsletter and never miss important updates, news, or service announcements."
+      description="Use our professional email templates to subscribe to newsletters, alerts, and service center communications."
+      class="bg-gray-50 dark:bg-gray-900"
     >
-      <UContainer class="max-w-2xl">
-        <UCard>
-          <template #header>
-            <div class="text-center">
-              <UIcon name="lucide:mail" class="text-3xl text-primary mx-auto mb-2" />
-              <h3 class="text-xl font-semibold">Newsletter Subscription</h3>
-              <p class="text-sm text-muted-foreground">Get the latest updates delivered to your inbox</p>
-            </div>
-          </template>
-
-          <UForm class="space-y-4">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <UFormField name="firstName" label="First Name" required>
-                <UInput placeholder="John" />
-              </UFormField>
-              <UFormField name="lastName" label="Last Name" required>
-                <UInput placeholder="Doe" />
-              </UFormField>
-            </div>
-            
-            <UFormField name="email" label="Email Address" required>
-              <UInput type="email" placeholder="john@company.com" />
-            </UFormField>
-            
-            <UFormField name="company" label="Company (Optional)">
-              <UInput placeholder="Your Company Ltd" />
-            </UFormField>
-            
-            <UFormField name="interests" label="Interests">
-              <div class="space-y-2">
-                <label class="flex items-center gap-2">
-                  <input type="checkbox" class="rounded">
-                  <span class="text-sm">General news and updates</span>
-                </label>
-                <label class="flex items-center gap-2">
-                  <input type="checkbox" class="rounded">
-                  <span class="text-sm">Service disruption alerts</span>
-                </label>
-                <label class="flex items-center gap-2">
-                  <input type="checkbox" class="rounded">
-                  <span class="text-sm">New service announcements</span>
-                </label>
-                <label class="flex items-center gap-2">
-                  <input type="checkbox" class="rounded">
-                  <span class="text-sm">Industry insights and trends</span>
-                </label>
-              </div>
-            </UFormField>
-            
-            <UButton type="submit" size="lg" block>
-              Subscribe to Newsletter
-            </UButton>
-            
-            <p class="text-xs text-muted-foreground text-center">
-              By subscribing, you agree to receive marketing communications from AGL LOGISTICS. You can unsubscribe at any time.
-            </p>
-          </UForm>
-        </UCard>
+      <UContainer>
+        <ServiceCenterEmailTemplates />
       </UContainer>
     </UPageSection>
   </div>

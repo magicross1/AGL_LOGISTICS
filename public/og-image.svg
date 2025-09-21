@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0066CC"/>
+  
+  <!-- Background Pattern -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="m 50 0 L 0 0 0 50" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Gradient Overlay -->
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Area -->
+  <circle cx="200" cy="315" r="60" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Truck Icon -->
+  <g transform="translate(170, 285)">
+    <path d="M2 15.5V7a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v8.5M2 15.5h2m0 0V12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3.5m-4 0h4m0 0v-3.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3.5m-4 0h4m0 0h2v-8.5a1 1 0 0 0-1-1h-2m0 0V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v3.5m10 0V4" 
+          stroke="#0066CC" 
+          stroke-width="3" 
+          fill="none"
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <circle cx="6" cy="20" r="2" fill="#0066CC"/>
+    <circle cx="18" cy="20" r="2" fill="#0066CC"/>
+  </g>
+  
+  <!-- Company Name -->
+  <text x="300" y="280" font-family="serif" font-size="72" font-weight="900" fill="#ffffff">
+    AGL LOGISTICS
+  </text>
+  
+  <!-- PTY LTD -->
+  <text x="300" y="330" font-family="serif" font-size="32" font-weight="700" fill="#ffffff" opacity="0.9">
+    PTY LTD
+  </text>
+  
+  <!-- Tagline -->
+  <text x="300" y="380" font-family="sans-serif" font-size="28" font-weight="500" fill="#ffffff" opacity="0.8">
+    Professional Freight &amp; Logistics Services
+  </text>
+  
+  <!-- Location -->
+  <text x="300" y="420" font-family="sans-serif" font-size="24" font-weight="400" fill="#ffffff" opacity="0.7">
+    Sydney • Melbourne • Brisbane • Perth
+  </text>
+  
+  <!-- Website -->
+  <text x="300" y="460" font-family="sans-serif" font-size="20" font-weight="400" fill="#ffffff" opacity="0.6">
+    agllogistics.com.au
+  </text>
+  
+  <!-- Decorative Elements -->
+  <rect x="950" y="100" width="200" height="4" fill="#ffffff" opacity="0.3" rx="2"/>
+  <rect x="950" y="120" width="150" height="4" fill="#ffffff" opacity="0.2" rx="2"/>
+  <rect x="950" y="140" width="180" height="4" fill="#ffffff" opacity="0.25" rx="2"/>
+  
+  <rect x="950" y="480" width="200" height="4" fill="#ffffff" opacity="0.3" rx="2"/>
+  <rect x="950" y="500" width="150" height="4" fill="#ffffff" opacity="0.2" rx="2"/>
+  <rect x="950" y="520" width="180" height="4" fill="#ffffff" opacity="0.25" rx="2"/>
+</svg>

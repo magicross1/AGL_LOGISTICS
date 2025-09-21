@@ -89,18 +89,22 @@ useSeoMeta({
     v-if="page"
     class="relative"
   >
+    <!-- Structured Data -->
+    <StructuredData type="organization" />
+    <StructuredData type="website" />
 
-    <UPageHero
-      :description="page.description"
-      :links="page.hero.links"
-      :ui="{
-        container: 'md:pt-24 lg:pt-32 pb-24 lg:pb-32 relative z-10',
-        title: 'max-w-4xl mx-auto text-white',
-        description: 'max-w-3xl mx-auto text-white/90 text-lg',
-        links: 'justify-center gap-4'
-      }"
-      class="relative min-h-[80vh] flex items-center"
-    >
+    <section class="hero-section">
+      <UPageHero
+        :description="page.description"
+        :links="page.hero.links"
+        :ui="{
+          container: 'md:pt-24 lg:pt-32 pb-24 lg:pb-32 relative z-10',
+          title: 'max-w-4xl mx-auto text-white',
+          description: 'max-w-3xl mx-auto text-white/90 text-lg',
+          links: 'justify-center gap-4'
+        }"
+        class="relative w-full flex items-center"
+      >
       <template #top>
         <VideoHeroBackground />
       </template>
@@ -113,6 +117,7 @@ useSeoMeta({
         />
       </template>
     </UPageHero>
+    </section>
 
     <UPageSection
       :description="page.section.description"
@@ -365,3 +370,22 @@ useSeoMeta({
     </UPageCTA>
   </div>
 </template>
+
+<style scoped>
+.hero-section {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  max-height: 900px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+</style>
