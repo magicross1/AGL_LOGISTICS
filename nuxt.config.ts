@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app:{
+    baseURL: '/agl/', // 部署在子目录时使用
+  },
+  devServer: {
+    port: 8081
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
