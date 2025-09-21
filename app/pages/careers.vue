@@ -279,8 +279,8 @@ const values = [
                     </div>
                   </div>
                 </div>
-                <UButton 
-                  size="sm" 
+                <UButton
+                  size="sm"
                   color="primary"
                   :to="`mailto:ops@agllogistics.com.au?subject=Job Application - ${job.title}&body=Dear AGL LOGISTICS Hiring Team,%0D%0A%0D%0AI am writing to express my interest in the ${job.title} position in your ${job.department} department located in ${job.location}.%0D%0A%0D%0APosition Details:%0D%0A- Job Title: ${job.title}%0D%0A- Department: ${job.department}%0D%0A- Location: ${job.location}%0D%0A- Employment Type: ${job.type}%0D%0A%0D%0APlease find my resume and cover letter attached. I would welcome the opportunity to discuss how my experience and skills align with your requirements.%0D%0A%0D%0AThank you for your consideration.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]%0D%0A[Your Phone Number]%0D%0A[Your Email Address]`"
                 >
@@ -289,13 +289,13 @@ const values = [
                 </UButton>
               </div>
             </template>
-            
+
             <div class="space-y-6">
               <div>
                 <h4 class="font-semibold mb-2">Role Description</h4>
                 <p class="text-muted-foreground">{{ job.description }}</p>
               </div>
-              
+
               <div>
                 <h4 class="font-semibold mb-2">Requirements</h4>
                 <ul class="space-y-1">
@@ -309,7 +309,7 @@ const values = [
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 class="font-semibold mb-2">Benefits</h4>
                 <ul class="space-y-1">
@@ -425,8 +425,8 @@ const values = [
                   </div>
                 </div>
 
-                <UButton 
-                  size="lg" 
+                <UButton
+                  size="lg"
                   block
                   color="primary"
                   to="mailto:ops@agllogistics.com.au?subject=General Job Application - Future Opportunities&body=Dear AGL LOGISTICS Hiring Team,%0D%0A%0D%0AI am interested in joining your team and would like to be considered for future opportunities that match my skills and experience.%0D%0A%0D%0APersonal Information:%0D%0A- Name: [Your Full Name]%0D%0A- Phone: [Your Phone Number]%0D%0A- Email: [Your Email Address]%0D%0A- Location: [Your Current Location]%0D%0A%0D%0ACareer Interests:%0D%0A- Preferred Department: [Operations/Customs/Warehouse/Customer Service/Sales/IT/Finance/Management]%0D%0A- Experience Level: [Entry/Junior/Mid-Level/Senior/Executive]%0D%0A- Preferred Location: [Sydney/Melbourne/Brisbane/Perth]%0D%0A- Available Start Date: [Date]%0D%0A%0D%0AKey Skills and Experience:%0D%0A[Please describe your relevant experience, skills, and qualifications]%0D%0A%0D%0AWhy AGL LOGISTICS:%0D%0A[Tell us why you're interested in joining our team]%0D%0A%0D%0APlease find my resume attached.%0D%0A%0D%0AThank you for considering my application. I look forward to hearing about future opportunities.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]"
@@ -435,9 +435,9 @@ const values = [
                   <UIcon name="lucide:mail" class="mr-2" />
                   Send Resume via Email
                 </UButton>
-                
+
                 <p class="text-xs text-gray-500">
-                  This will open your email client with a pre-written template. 
+                  This will open your email client with a pre-written template.
                   Don't forget to attach your resume!
                 </p>
               </div>
@@ -463,7 +463,7 @@ const values = [
                     <h4 class="font-bold">WhatsApp Business</h4>
                   </div>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Quick inquiries about career opportunities</p>
-                  <UButton 
+                  <UButton
                     to="https://wa.me/61287473069?text=Hi%20AGL%20LOGISTICS,%20I'm%20interested%20in%20career%20opportunities%20with%20your%20company.%20Could%20you%20please%20provide%20information%20about%20current%20or%20future%20openings?"
                     target="_blank"
                     color="green"
@@ -485,7 +485,7 @@ const values = [
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Speak directly with our HR team</p>
                   <div class="space-y-2">
                     <p class="font-mono text-sm font-bold text-center">+61 2 8747 3069</p>
-                    <UButton 
+                    <UButton
                       to="tel:+61-2-8747-3069"
                       color="blue"
                       size="sm"
@@ -505,7 +505,7 @@ const values = [
                     <h4 class="font-bold">LinkedIn</h4>
                   </div>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Connect with us professionally</p>
-                  <UButton 
+                  <UButton
                     to="https://linkedin.com/company/agl-logistics"
                     target="_blank"
                     color="primary"
@@ -536,8 +536,8 @@ const values = [
           color: 'primary'
         },
         {
-          label: 'Call +61 2 9999 0000',
-          to: 'tel:+61299990000',
+          label: 'Call +61 2 8747 3069',
+          to: 'tel:+61287473069',
           variant: 'outline'
         }
       ]"
