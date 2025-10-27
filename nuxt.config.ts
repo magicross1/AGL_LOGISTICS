@@ -2,10 +2,17 @@
 export default defineNuxtConfig({
   app:{
     baseURL: '/agl/', // 部署在子目录时使用
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/agl/agl-favicon.ico' }
+      ]
+    }
   },
+  
   devServer: {
     port: 8081
   },
+  
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',

@@ -15,18 +15,20 @@ HOST = "139.180.160.177"                 # 服务器 IP 或域名，例如: "203
 PORT = 22                  # SSH 端口
 USER = "root"                 # SSH 用户名
 # 认证：二选一，设置 PASSWORD 或 KEY（私钥路径），另一个保持为空
-PASSWORD = "8jB],LH$g5z*Mk_M"            # 例如: "your_password"
+PASSWORD = "2X]f}!v#T6PtpUG8"            # 例如: "your_password"
 KEY = None                 # 例如: r"C:\\Users\\you\\.ssh\\id_rsa" 或 "/home/you/.ssh/id_rsa"
 
 # 本地打包目录（默认 Nuxt 静态构建产物）
 LOCAL_DIR = os.path.join(".output", "public")
 
 # 远端部署目录（绝对路径）
-REMOTE_DIR = "/var/www/bsbtransport/public"           # 例如: "/var/www/bsb"
+REMOTE_DIR = "/var/www/agl/public"           # AGL 项目独立部署目录
 
 # 其他开关
 NO_CLEAN_REMOTE = False    # True: 不清空远端目录，只覆盖同名文件
 DELETE_LOCAL_AFTER = False # True: 上传完成后删除本地目录
+UPLOAD_NGINX_CONFIG = True # True: 上传 nginx.conf 到 /etc/nginx/
+RELOAD_NGINX = True         # True: 上传 nginx 配置后自动重载
 
 
 def load_config():
@@ -47,6 +49,8 @@ def load_config():
         remote_dir=REMOTE_DIR,
         no_clean_remote=NO_CLEAN_REMOTE,
         delete_local_after=DELETE_LOCAL_AFTER,
+        upload_nginx_config=UPLOAD_NGINX_CONFIG,
+        reload_nginx=RELOAD_NGINX,
     )
 
 
@@ -153,6 +157,64 @@ def detect_remote_os(ssh: paramiko.SSHClient) -> str:
     return "unix"
 
 
+def upload_nginx_config(sftp, ssh):
+    """上传 nginx.conf 到服务器并备份原配置"""
+    nginx_conf_local = "nginx.conf"
+    nginx_conf_remote = "/etc/nginx/nginx.conf"
+    
+    if not os.path.exists(nginx_conf_local):
+        print(f"[WARN] nginx.conf not found in current directory, skipping nginx config upload")
+        return False
+    
+    try:
+        # 备份原配置
+        backup_path = f"/etc/nginx/nginx.conf.backup.{int(time.time())}"
+        print(f"[INFO] Backing up current nginx config to {backup_path}")
+        stdin, stdout, stderr = ssh.exec_command(f"cp {nginx_conf_remote} {backup_path}")
+        stdout.read()  # 等待命令完成
+        
+        # 上传新配置
+        print(f"[INFO] Uploading nginx.conf to {nginx_conf_remote}")
+        sftp.put(nginx_conf_local, nginx_conf_remote)
+        
+        # 测试配置
+        print("[INFO] Testing nginx configuration...")
+        stdin, stdout, stderr = ssh.exec_command("nginx -t")
+        test_output = stdout.read().decode()
+        error_output = stderr.read().decode()
+        
+        # 检查配置是否成功（nginx -t 成功时会在 stderr 中输出 "test is successful"）
+        if "test is successful" in error_output or "syntax is ok" in error_output:
+            print("[INFO] Nginx configuration test passed")
+            return True
+        else:
+            print(f"[ERROR] Nginx configuration test failed:")
+            print(f"STDOUT: {test_output}")
+            print(f"STDERR: {error_output}")
+            # 恢复备份
+            print("[INFO] Restoring backup configuration...")
+            stdin, stdout, stderr = ssh.exec_command(f"cp {backup_path} {nginx_conf_remote}")
+            stdout.read()
+            return False
+            
+    except Exception as e:
+        print(f"[ERROR] Failed to upload nginx config: {e}")
+        return False
+
+
+def reload_nginx(ssh):
+    """重载 nginx 配置"""
+    try:
+        print("[INFO] Reloading nginx configuration...")
+        stdin, stdout, stderr = ssh.exec_command("nginx -s reload")
+        stdout.read()  # 等待命令完成
+        print("[INFO] Nginx reloaded successfully")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to reload nginx: {e}")
+        return False
+
+
 def deploy_zip_unix(ssh: paramiko.SSHClient, remote_dir_posix: str, remote_zip_posix: str):
     # Use unzip; ensure remote_dir is replaced freshly
     cmd = f"set -e; rm -rf '{remote_dir_posix}' && mkdir -p '{remote_dir_posix}' && unzip -q -o '{remote_zip_posix}' -d '{remote_dir_posix}' && rm -f '{remote_zip_posix}'"
@@ -229,6 +291,15 @@ def main():
         else:
             deploy_zip_unix(ssh, remote_dir, remote_zip)
         print("[INFO] Remote deploy finished successfully.")
+
+        # 4) 上传 nginx 配置（如果启用）
+        if args.upload_nginx_config:
+            print("[INFO] Uploading nginx configuration...")
+            nginx_success = upload_nginx_config(sftp, ssh)
+            if nginx_success and args.reload_nginx:
+                reload_nginx(ssh)
+            elif not nginx_success:
+                print("[WARN] Nginx configuration upload failed, but deployment completed")
 
     except Exception as e:
         print(f"[ERROR] Upload failed: {e}", file=sys.stderr)
